@@ -47,19 +47,20 @@
                         <div class="form col-12">
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
+                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor">
                                     <label for="inputValue">Precio de la bicicleta</label>
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Agregar descuento %</label>
+                                    <input type="number" class="form-control" id="inputDiscont" placeholder="Ingresar valor">
+                                    <label for="inputDiscont">Agregar descuento %</label>
                                 </div>
                             </div>     
-                            <button type="button" class="col-2 btn btn-warning">CALCULAR</button> 
+                            <button id="calculate" onclick="discontBtn()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
-                        <p>El precio con descuento es:</p>                                            
+                        <p>El precio con descuento es: <strong id="result"></strong></p>  
+                        <button id="eraseMadone" onclick="eraseInputsMadone()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                          
                     </div>               
                 </div>
                 <div class="card border-bottom offset-1 col-10">
@@ -72,19 +73,20 @@
                         <div class="form col-12">
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Precio de la bicicleta</label>
+                                    <input type="number" class="form-control" id="inputValueEmonda" placeholder="Ingresar valor">
+                                    <label for="inputValueEmonda">Precio de la bicicleta</label>
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Agregar descuento %</label>
+                                    <input type="number" class="form-control" id="inputDiscontEmonda" placeholder="Ingresar valor">
+                                    <label for="inputDiscontEmonda">Agregar descuento %</label>
                                 </div>
                             </div>     
-                            <button type="button" class="col-2 btn btn-warning">CALCULAR</button> 
+                            <button id="calculate" onclick="discontBtnEmonda()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
-                        <p>El precio con descuento es:</p>                                            
+                        <p>El precio con descuento es: <strong id="resultEmonda"></strong></p> 
+                        <button id="eraseEmonda" onclick="eraseInputsEmonda()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                             
                     </div>               
                 </div>
                 <div class="card border-bottom offset-1 col-10">
@@ -97,19 +99,20 @@
                         <div class="form col-12">
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Precio de la bicicleta</label>
+                                    <input type="number" class="form-control" id="inputValueDomane" placeholder="Ingresar valor">
+                                    <label for="inputValueDomane">Precio de la bicicleta</label>
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Agregar descuento %</label>
+                                    <input type="number" class="form-control" id="inputDiscontDomane" placeholder="Ingresar valor">
+                                    <label for="inputDiscontDomane">Agregar descuento %</label>
                                 </div>
                             </div>     
-                            <button type="button" class="col-2 btn btn-warning">CALCULAR</button> 
+                            <button id="calculate" onclick="discontBtnDomane()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
-                        <p>El precio con descuento es:</p>                                            
+                        <p>El precio con descuento es: <strong id="resultDomane"></strong></p>     
+                        <button id="eraseEmonda" onclick="eraseInputsDomane()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                       
                     </div>               
                 </div>
                 <div class="card border-bottom offset-1 col-10">
@@ -122,19 +125,20 @@
                         <div class="form col-12">
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Precio de la bicicleta</label>
+                                    <input type="number" class="form-control" id="inputValueCheckpoint" placeholder="Ingresar valor">
+                                    <label for="inputValueCheckpoint">Precio de la bicicleta</label>
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor" value="Ingresar valor">
-                                    <label for="inputValue">Agregar descuento %</label>
+                                    <input type="number" class="form-control" id="inputDiscontCheckpoint" placeholder="Ingresar valor">
+                                    <label for="inputDiscontCheckpoint">Agregar descuento %</label>
                                 </div>
                             </div>     
-                            <button type="button" class="col-2 btn btn-warning">CALCULAR</button> 
+                            <button id="calculate" onclick="priceDiscountCheckpoint()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
-                        <p>El precio con descuento es:</p>                                            
+                        <p>El precio con descuento es: <strong id="resultCheckpoint"></strong></p>       
+                        <button id="erasecheckpoint" onclick="eraseInputsCheckpoint()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                      
                     </div>               
                 </div>
             </div>

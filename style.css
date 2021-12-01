@@ -98,6 +98,7 @@ body{
     font-weight: normal;
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 0;
 }
 
 .container-items .card .card-body .form{
@@ -121,5 +122,13 @@ body{
     font-size: 14px;
     line-height: 16px;
 }
+
+.container-items .card .card-body .erase{
+    color: #ffca2c;
+    margin-top: 8px;
+    padding: 0;
+    text-decoration: none;
+}
+
 
 

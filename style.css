@@ -1,0 +1,125 @@
+body{
+    background-color: black!important;
+}
+
+/* titulo */
+.container-title .title-detail{
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+.container-title .title-detail img{
+    margin-right: 24px;
+}
+
+.container-title .title-detail h1{
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.container-title .title-detail h1 strong{
+    font-weight: 700;
+}
+
+.container-title .heroImage{
+    max-height: 315px;
+    margin-bottom: 24px;
+}
+
+.container-title .heroImage img{
+    max-height: 315px;
+    object-fit: cover;
+}
+
+.container-title .body-title p{
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+}
+/* titulo */
+
+/* cards */
+.container-items{
+    margin-top: 48px;
+}
+
+.container-items .items-title{
+    margin-bottom: 36px;
+}
+
+.container-items .items-title h4{
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;  
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+.container-items .card{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    padding-bottom: 32px;
+    border-radius: 0;
+    margin-bottom: 32px;
+}
+
+.container-items .card .card-body{
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.container-items .card .card-body h5{
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.container-items .card .card-body p{
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.container-items .card .card-body .form{
+    display: flex;
+    margin: 24px 0;
+}
+
+.container-items .card .card-body .form .form-floating{
+    width: 335px;
+}
+
+.container-items .card .card-body .form .form-floating input{
+   background-color: #000!important;
+   color: #fff;
+}
+
+.container-items .card .card-body .form button{
+    font-family: TT Norms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+

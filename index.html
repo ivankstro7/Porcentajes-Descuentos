@@ -47,17 +47,17 @@
                         <div class="form col-12">
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputValue" placeholder="Ingresar valor">
+                                    <input type="number" class="form-control" id="inputValueMadone" placeholder="Ingresar valor">
                                     <label for="inputValue">Precio de la bicicleta</label>
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <select class="form-select" id="discountList">
+                                    <select class="form-select" id="discountListMadone">
                                         <option selected>Seleccionar</option>
-                                        <option id="blackFriday" value="75%">Cupon Black Friday</option>
-                                        <option id="ciberMonday" value="50%">Cupon Ciber Monday</option>
-                                        <option id="Christmas" value="25%">Cupon Navidad</option>
+                                        <option id="blackFriday" value=75>Cupon Black Friday</option>
+                                        <option id="ciberMonday" value=50>Cupon Ciber Monday</option>
+                                        <option id="Christmas" value=25>Cupon Navidad</option>
                                       </select>
                                     <label for="discountList">Cupones con descuentos %</label>
                                 </div>
@@ -121,7 +121,7 @@
                                     <label for="inputDiscontDomane">Agregar descuento %</label>
                                 </div>
                             </div>     
-                            <button id="calculate" onclick="discontBtnDomane()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
+                            <button id="calculate" onclick="discontBtnDomane('Domane')" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
                         <p>El precio con descuento es: <strong id="resultDomane"></strong></p>     
                         <button id="eraseEmonda" onclick="eraseInputsDomane()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png" alt="Icono para borrar campos"></img> </button>                                       

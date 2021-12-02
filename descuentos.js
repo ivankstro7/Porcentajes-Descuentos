@@ -10,29 +10,39 @@ function calcularPrecioConDescuento(precio, descuento) {
   
 // Madone
 
-function discontBtn() {
+function discontBtn(type) {
+
+  // type = 
+  
+  const inputValue = document.getElementById("inpuValue"+type)
+
+
   // inputs
   const inputValue = document.getElementById("inputValue").value;  
   const inputDiscount = document.getElementById("discountList").value;
-
+  
   // inputs list
   const blackFriday = document.getElementById("blackFriday");
   const ciberMonday = document.getElementById("ciberMonday");
   const Christmas = document.getElementById("Christmas");
 
-  if (inputDiscount == blackFriday) {
-    const coupon = document.getElementById("blackFriday");
-    coupon.innerText = parseInt(coupon.value);
-  } else if (inputDiscount == ciberMonday) {
-    const coupon = document.getElementById("ciberMonday");
-    coupon.innerText = parseInt(coupon.value);
-  } else if (inputDiscount == Christmas ){
-    const coupon = document.getElementById("Christmas");
-    coupon.innerText = parseInt(coupon.value);
+  // 
+  const cupon = document.getElementById("coupon");
+
+  let discount = 0
+
+  if (inputDiscount == blackFriday.value) {
+    discount = blackFriday.value
+  } else if (inputDiscount == ciberMonday.value) {
+    discount = ciberMonday.value
+  } else if (inputDiscount == Christmas.value){
+    discount = Christmas.value
+  } else {
+    discount = 0
   }
 
   // calculo - operación
-  const precioConDescuento = calcularPrecioConDescuento(inputValue, parseInt(inputDiscount));
+  const precioConDescuento = calcularPrecioConDescuento(inputValue, discount);
 
   // mostrar precio con descuento
   const result = document.getElementById("result");
@@ -40,9 +50,9 @@ function discontBtn() {
   result.innerText = "$ " + precioConDescuento;
 
   // mostrar valor del cupon
-  const cupon = document.getElementById("coupon");
   cupon.style.color = "#fff";
-  cupon.innerText = inputDiscount;
+  //cupon.style.display = "block"
+  cupon.innerText = discount + "%";
 }
 
 function eraseInputsMadone(){

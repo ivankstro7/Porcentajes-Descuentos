@@ -11,26 +11,49 @@ function calcularPrecioConDescuento(precio, descuento) {
 // Madone
 
 function discontBtn() {
-  const inputValue = document.getElementById("inputValue");
-  const priceValue = inputValue.value;
-  
-  const inputDiscount = document.getElementById("inputDiscont");
-  const discountValue = inputDiscount.value;
+  // inputs
+  const inputValue = document.getElementById("inputValue").value;  
+  const inputDiscount = document.getElementById("discountList").value;
 
-  const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue);
+  // inputs list
+  const blackFriday = document.getElementById("blackFriday");
+  const ciberMonday = document.getElementById("ciberMonday");
+  const Christmas = document.getElementById("Christmas");
 
+  if (inputDiscount == blackFriday) {
+    const coupon = document.getElementById("blackFriday");
+    coupon.innerText = parseInt(coupon.value);
+  } else if (inputDiscount == ciberMonday) {
+    const coupon = document.getElementById("ciberMonday");
+    coupon.innerText = parseInt(coupon.value);
+  } else if (inputDiscount == Christmas ){
+    const coupon = document.getElementById("Christmas");
+    coupon.innerText = parseInt(coupon.value);
+  }
+
+  // calculo - operación
+  const precioConDescuento = calcularPrecioConDescuento(inputValue, parseInt(inputDiscount));
+
+  // mostrar precio con descuento
   const result = document.getElementById("result");
   result.style.color = "#fff";
+  result.innerText = "$ " + precioConDescuento;
 
-  result.innerText = precioConDescuento;
+  // mostrar valor del cupon
+  const cupon = document.getElementById("coupon");
+  cupon.style.color = "#fff";
+  cupon.innerText = inputDiscount;
 }
 
 function eraseInputsMadone(){
   document.getElementById("inputValue").value = "";
-  document.getElementById("inputDiscont").value = "";
+  document.getElementById("discountList").value = "";
 
   const result = document.getElementById("result");
   result.style.color = "#000";
+
+  const cupon = document.getElementById("coupon");
+  cupon.style.color = "#000";
 
 }
 

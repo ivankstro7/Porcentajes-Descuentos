@@ -35,14 +35,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="items-title offset-1 col-10">
-                    <h4>EXPLORAR BICICLETAS</h4>
+                    <h2>EXPLORAR BICICLETAS</h2>
                 </div>      
                 <div class="card border-bottom offset-1 col-10">
                     <div class="img-bike">
                         <img src="./assets/madone.png" alt="trek madone">
                     </div>                       
                     <div class="card-body">
-                        <h5 class="card-title">Trek Madone</h5>
+                        <h3 class="card-title">Trek Madone</h3>
                         <p class="card-text">La Madone simboliza la velocidad.</p>                                
                         <div class="form col-12">
                             <div class="col-5">
@@ -53,14 +53,26 @@
                             </div>
                             <div class="col-5">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="inputDiscont" placeholder="Ingresar valor">
-                                    <label for="inputDiscont">Agregar descuento %</label>
+                                    <select class="form-select" id="discountList">
+                                        <option selected>Seleccionar</option>
+                                        <option id="blackFriday" value="75%">Cupon Black Friday</option>
+                                        <option id="ciberMonday" value="50%">Cupon Ciber Monday</option>
+                                        <option id="Christmas" value="25%">Cupon Navidad</option>
+                                      </select>
+                                    <label for="discountList">Cupones con descuentos %</label>
                                 </div>
                             </div>     
                             <button id="calculate" onclick="discontBtn()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
-                        <p>El precio con descuento es: <strong id="result"></strong></p>  
-                        <button id="eraseMadone" onclick="eraseInputsMadone()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                          
+                        <div class="body-detail col-12">
+                            <div class="coupon col-5">
+                                <p>Valor del cupon: <strong id="coupon"></strong></p>
+                            </div>
+                            <div class="discount col-5">
+                                <p>Precio con descuento: <strong id="result"></strong></p>  
+                            </div>                            
+                        </div>                        
+                        <button id="eraseMadone" onclick="eraseInputsMadone()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png" alt="Icono para borrar campos"></img> </button>                                          
                     </div>               
                 </div>
                 <div class="card border-bottom offset-1 col-10">
@@ -68,7 +80,7 @@
                         <img src="./assets/emonda.png" alt="trek Émonda">
                     </div>                       
                     <div class="card-body">
-                        <h5 class="card-title">Trek Émonda</h5>
+                        <h3 class="card-title">Trek Émonda</h3>
                         <p class="card-text">La Émonda es una bicicleta ultraligera.</p>                                
                         <div class="form col-12">
                             <div class="col-5">
@@ -86,7 +98,7 @@
                             <button id="calculate" onclick="discontBtnEmonda()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
                         <p>El precio con descuento es: <strong id="resultEmonda"></strong></p> 
-                        <button id="eraseEmonda" onclick="eraseInputsEmonda()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                             
+                        <button id="eraseEmonda" onclick="eraseInputsEmonda()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png" alt="Icono para borrar campos"></img> </button>                                             
                     </div>               
                 </div>
                 <div class="card border-bottom offset-1 col-10">
@@ -94,7 +106,7 @@
                         <img src="./assets/Domane.png" alt="trek Domane">
                     </div>                       
                     <div class="card-body">
-                        <h5 class="card-title">Trek Domane</h5>
+                        <h3 class="card-title">Trek Domane</h3>
                         <p class="card-text">La Domane absorbe impactos, permite rodar más rápido en cada salida.</p>                                
                         <div class="form col-12">
                             <div class="col-5">
@@ -112,7 +124,7 @@
                             <button id="calculate" onclick="discontBtnDomane()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
                         <p>El precio con descuento es: <strong id="resultDomane"></strong></p>     
-                        <button id="eraseEmonda" onclick="eraseInputsDomane()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                       
+                        <button id="eraseEmonda" onclick="eraseInputsDomane()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png" alt="Icono para borrar campos"></img> </button>                                       
                     </div>               
                 </div>
                 <div class="card border-bottom offset-1 col-10">
@@ -120,7 +132,7 @@
                         <img src="./assets/Checkpoint.png" alt="trek Checkpoint">
                     </div>                       
                     <div class="card-body">
-                        <h5 class="card-title">Trek Checkpoint</h5>
+                        <h3 class="card-title">Trek Checkpoint</h3>
                         <p class="card-text">La Checkpoint es una bicicleta polivalente de gravel.</p>                                
                         <div class="form col-12">
                             <div class="col-5">
@@ -138,7 +150,7 @@
                             <button id="calculate" onclick="priceDiscountCheckpoint()" type="button" class="col-2 btn btn-warning">CALCULAR</button> 
                         </div>  
                         <p>El precio con descuento es: <strong id="resultCheckpoint"></strong></p>       
-                        <button id="erasecheckpoint" onclick="eraseInputsCheckpoint()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png"></img> </button>                                      
+                        <button id="erasecheckpoint" onclick="eraseInputsCheckpoint()" type="button" class="erase btn btn-link">Limpiar campos <img src="./assets/delete.png" alt="Icono para borrar campos"></img> </button>                                      
                     </div>               
                 </div>
             </div>

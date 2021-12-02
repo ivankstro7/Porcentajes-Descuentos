@@ -57,7 +57,7 @@ body{
     margin-bottom: 36px;
 }
 
-.container-items .items-title h4{
+.container-items .items-title h2{
     font-family: TT Norms;
     font-style: normal;
     font-weight: bold;
@@ -83,7 +83,7 @@ body{
     padding-top: 0;
 }
 
-.container-items .card .card-body h5{
+.container-items .card .card-body h3{
     font-family: TT Norms;
     font-style: normal;
     font-weight: bold;
@@ -110,9 +110,14 @@ body{
     width: 335px;
 }
 
+.container-items .card .card-body .form .form-floating .form-select{
+    background-color: #000!important;
+    color: #fff;
+}
+
 .container-items .card .card-body .form .form-floating input{
-   background-color: #000!important;
-   color: #fff;
+    background-color: #000!important;
+    color: #fff;
 }
 
 .container-items .card .card-body .form button{
@@ -121,6 +126,10 @@ body{
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
+}
+
+.container-items .card .card-body .body-detail{
+    display: flex;
 }
 
 .container-items .card .card-body .erase{

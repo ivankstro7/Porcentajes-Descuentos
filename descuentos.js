@@ -71,7 +71,7 @@ function discontBtnEmonda() {
   const result = document.getElementById("resultEmonda");
   result.style.color = "#fff";
 
-  result.innerText = precioConDescuento;
+  result.innerText = "$ " + precioConDescuento;
 }
 
 function eraseInputsEmonda() {
@@ -96,7 +96,7 @@ function discontBtnDomane() {
   const result = document.getElementById("resultDomane");
   result.style.color = "#fff";
 
-  result.innerText = precioConDescuento;
+  result.innerText = "$ " + precioConDescuento;
 }
 
 function eraseInputsDomane() {
@@ -121,7 +121,7 @@ function priceDiscountCheckpoint() {
   const result = document.getElementById("resultCheckpoint");
   result.style.color = "#fff";
 
-  result.innerText = precioConDescuento;
+  result.innerText = "$ " + precioConDescuento;
 }
 
 function eraseInputsCheckpoint() {

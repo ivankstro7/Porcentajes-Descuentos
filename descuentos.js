@@ -10,24 +10,16 @@ function calcularPrecioConDescuento(precio, descuento) {
   
 // Madone
 
-function discontBtn(type) {
-
-  // type = 
-  
-  const inputValue = document.getElementById("inpuValue"+type)
-
+function discontBtn() {
 
   // inputs
-  const inputValue = document.getElementById("inputValue").value;  
-  const inputDiscount = document.getElementById("discountList").value;
+  const inputValue = document.getElementById("inputValueMadone").value;  
+  const inputDiscount = document.getElementById("discountListMadone").value;
   
   // inputs list
   const blackFriday = document.getElementById("blackFriday");
   const ciberMonday = document.getElementById("ciberMonday");
   const Christmas = document.getElementById("Christmas");
-
-  // 
-  const cupon = document.getElementById("coupon");
 
   let discount = 0
 
@@ -50,14 +42,14 @@ function discontBtn(type) {
   result.innerText = "$ " + precioConDescuento;
 
   // mostrar valor del cupon
+  const cupon = document.getElementById("coupon");
   cupon.style.color = "#fff";
-  //cupon.style.display = "block"
   cupon.innerText = discount + "%";
 }
 
 function eraseInputsMadone(){
-  document.getElementById("inputValue").value = "";
-  document.getElementById("discountList").value = "";
+  document.getElementById("inputValueMadone").value = "";
+  document.getElementById("discountListMadone").value = "";
 
   const result = document.getElementById("result");
   result.style.color = "#000";
